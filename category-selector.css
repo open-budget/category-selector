@@ -1,0 +1,80 @@
+#category-selector {
+  width: 470px;
+  height: 540px;
+  font: bold 17px "PT Sans";
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  color: #333; }
+  #category-selector ul, #category-selector li, #category-selector div, #category-selector input, #category-selector span {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none; }
+  #category-selector .filter {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #eeeeee;
+    overflow: hidden; }
+    #category-selector .filter .icon {
+      width: 20px;
+      height: 20px;
+      margin: 11px 0 0 16px;
+      position: absolute; }
+      #category-selector .filter .icon svg path {
+        fill: #aaa; }
+    #category-selector .filter input {
+      width: 100%;
+      margin: 0px 0 0 50px;
+      height: 40px;
+      border: none;
+      background: none;
+      font: bold 17px "PT Sans"; }
+      #category-selector .filter input:focus {
+        outline: none; }
+  #category-selector .categories {
+    height: 460px;
+    overflow: auto; }
+    #category-selector .categories ul li {
+      margin: 16px 0 16px 0;
+      padding-left: 16px;
+      min-height: 37px;
+      vertical-align: middle;
+      border-bottom: 1px solid #eeeeee;
+      overflow: hidden;
+      cursor: pointer; }
+      #category-selector .categories ul li:last-of-type {
+        border-bottom: none; }
+      #category-selector .categories ul li .check {
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-right: 10px;
+        margin-top: 4px; }
+        #category-selector .categories ul li .check svg {
+          display: none; }
+          #category-selector .categories ul li .check svg path {
+            fill: greenyellow; }
+      #category-selector .categories ul li .name {
+        width: 1000px;
+        color: #8d8d8d; }
+      #category-selector .categories ul li.selected .check {
+        border-color: #ccc; }
+        #category-selector .categories ul li.selected .check svg {
+          display: block; }
+      #category-selector .categories ul li.selected .name {
+        color: #333; }
+  #category-selector .statusbar {
+    height: 40px;
+    font-size: 11px;
+    border-top: 1px solid #eeeeee;
+    font-weight: normal; }
+    #category-selector .statusbar .info {
+      position: absolute;
+      color: #aaa;
+      margin: 12px 0 0 45px; }
+    #category-selector .statusbar .clean {
+      position: absolute;
+      margin: 12px 0 0 345px;
+      cursor: pointer; }
+      #category-selector .statusbar .clean:hover {
+        color: #999; }

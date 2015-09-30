@@ -1,0 +1,134 @@
+#category-selector {
+
+    // cleaner
+    ul, li, div, input, span {
+        margin: 0;
+        padding: 0;
+        text-indent: 0;
+        list-style: none;
+    }
+
+    $border-color: #eee;
+    $font: bold 17px "PT Sans";
+    $height: 540px;
+
+    width: 470px;
+    height: $height;
+    font: $font;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    color: #333;
+
+    .filter {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid $border-color;
+        overflow: hidden;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin: 11px 0 0 16px;
+            position: absolute;
+
+            svg {
+                path {
+                    fill: #aaa;
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            margin: 0px 0 0 50px;
+            height: 40px;
+            border: none;
+            background: none;
+            font: $font;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .categories {
+        height: $height - 40 - 40;
+        overflow: auto;
+
+        ul {
+            li {
+                $margin-top: 16px;
+                margin: $margin-top 0 $margin-top 0;
+                padding-left: $margin-top;
+                min-height: 53 - $margin-top;
+                vertical-align: middle;
+                border-bottom: 1px solid $border-color;
+                overflow: hidden;
+                cursor: pointer;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                .check {
+                    $side: 20px;
+                    width: $side;
+                    height: $side;
+                    float: left;
+                    margin-right: 10px;
+                    margin-top: 4px;
+
+                    svg {
+                        display: none;
+
+                        path {
+                            fill: greenyellow;
+                        }
+                    }
+                }
+                
+                .name {
+                    width: 1000px;
+                    color: #8d8d8d;
+                }
+
+                &.selected {
+                    .check {
+                        border-color: #ccc;
+
+                        svg {
+                            display: block;
+                        }
+                    }
+                    .name {
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+
+    .statusbar {
+        height: 40px;
+        font-size: 11px;
+        border-top: 1px solid $border-color;
+        font-weight: normal;
+
+        .info {
+            position: absolute;
+            color: #aaa;
+            margin: 12px 0 0 45px;
+        }
+
+        .clean {
+            position: absolute;
+            margin: 12px 0 0 345px;
+            cursor: pointer;
+
+            &:hover {
+                color: #999;
+            }
+        }
+    }
+}
